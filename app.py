@@ -3,6 +3,7 @@ from __future__ import division, print_function, unicode_literals
 
 import os
 import requests
+import nltk
 
 from sumy.parsers.html import HtmlParser
 from sumy.parsers.plaintext import PlaintextParser
@@ -37,5 +38,6 @@ def home():
     return render_template('index.html', sentencesCount=3, boringStuff=boringStuff)
 
 if __name__ == "__main__":
+    nltk.download('punkt')
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
