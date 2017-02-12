@@ -1,2 +1,2 @@
-sumy
-flask
+Flask==0.12
+sumy==0.5.1
